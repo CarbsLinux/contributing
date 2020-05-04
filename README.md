@@ -11,6 +11,8 @@ guidelines. Exceptions may occur with good reasoning.
 - [Carbs Linux Contribution Guidelines](#carbs-linux-contribution-guidelines)
     - [General Conventions](#general-conventions)
     - [Shell Conventions](#shell-conventions)
+    - [Plaintext Conventions (MarkDown)](#plaintext-conventions-markdown)
+    - [Git Conventions](#git-conventions)
 
 <!-- markdown-toc end -->
 
@@ -89,9 +91,19 @@ prefer the following format.
     At the end of the section/file
     [link description]: https://example.com/location
 
+**Italic and Bold Faces**
+
+In markdown `_italics_` and `*italics*`, and `**bold**` and `__bold__`
+produce the same output. However, prefer `_italics_` and `**bold**`
+since they are easier to distinguish and make sense of.
 
 Git Conventions
 ---------------
+
+- You should commit a single change at a time. If you have
+  multiple unrelated changes in your file, commit them seperately.
+- In contrast, if you have multiple related changes across multiple
+  files, commit them together.
 
 Your commit message should be in the following format
 
@@ -108,5 +120,12 @@ Here is an example commit from [kiss]
     * If KISS_FORCE is specified, we don't check the manifest.
     * This will show every missing file, and won't die in the first manifest issue.
     * kiss will announce dependency checking after manifest checking is complete.
+
+**Exceptions**
+
+Exceptions are made for documentation, as it can be tedious to prepare
+in different hunks and such. There can be punction and spelling mistakes
+to fix. Just commit them with `file: update` where file stands for the
+name of the file.
 
 [kiss]: https://github.com/CarbsLinux/kiss
