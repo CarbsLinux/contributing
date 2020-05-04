@@ -124,8 +124,8 @@ Here is an example commit from [kiss]
 **Exceptions**
 
 Exceptions are made for documentation, as it can be tedious to prepare
-in different hunks and such. There can be punction and spelling mistakes
-to fix. Just commit them with `file: update` where file stands for the
-name of the file.
+in different hunks and such. There can be punctuation and spelling
+mistakes to fix. Just commit them with `file: update` where file stands
+for the name of the file.
 
 [kiss]: https://github.com/CarbsLinux/kiss
