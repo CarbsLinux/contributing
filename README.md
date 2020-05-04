@@ -13,6 +13,7 @@ guidelines. Exceptions may occur with good reasoning.
     - [Shell Conventions](#shell-conventions)
     - [Plaintext Conventions (MarkDown)](#plaintext-conventions-markdown)
     - [Git Conventions](#git-conventions)
+    - [C Conventions](#c-conventions)
 
 <!-- markdown-toc end -->
 
@@ -74,6 +75,9 @@ respectively. Using `#` is simpler, but underlines such as the
 latter, give a natural sense of depth to the reader. Usage of
 `###` for headers are okay as there is no replacement for them.
 
+Headings should have 2 preceding empty lines, and should be followed
+with a single empty line.
+
 **Code Blocks**
 
 Instead of ``` (three backticks) for code blocks, use 4 spaces
@@ -96,6 +100,7 @@ prefer the following format.
 In markdown `_italics_` and `*italics*`, and `**bold**` and `__bold__`
 produce the same output. However, prefer `_italics_` and `**bold**`
 since they are easier to distinguish and make sense of.
+
 
 Git Conventions
 ---------------
@@ -129,3 +134,17 @@ mistakes to fix. Just commit them with `file: update` where file stands
 for the name of the file.
 
 [kiss]: https://github.com/CarbsLinux/kiss
+
+
+C Conventions
+-------------
+
+C is currently only used in the package manager itself, so these are
+small, and restrictive guidelines.
+
+- Use 2 spaces for indentation.
+- If a portable program exists, don't bother reimplementing it.
+- Don't use any header outside of the standard C library. The reason
+  C programs exist in the package manager is to ensure portability.
+  That's why you should never, ever use a header that isn't in `libc`.
+
